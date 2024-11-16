@@ -1,0 +1,69 @@
+<table class='students'>
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+        <th>Action</th>
+    </tr>
+
+    <% @students.each do |student| %>
+        <tr class='row'>
+            <td><%= student.name %></td>
+            <td><%= student.subject %></td>
+            <td><%= student.marks %></td>
+            <td>
+            <div class="dropdown">
+            <button class="dropbtn">▼</button> 
+            <div class="dropdown-content">
+            <%= link_to '#', class: 'edit-btn', data: {id: student.id, name: student.name, subject: student.subject, marks: student.marks } do %>
+                Edit
+            <% end %>
+
+
+
+            <%= link_to 'Delete', destroy_student_path(id: student.id), data: {"turbo_method": :delete} %>
+            </div>
+        </div>
+            </td>
+        </tr>
+    <% end %>
+</table>
+
+
+<div class="new_student">
+  <%= button_to "Add", '', class: 'new_student_btn' %>
+</div>
+
+<div id="newStudentModal" class="modal">
+  <div class="modal-content">
+    <span class="close new-close">&times;</span>
+    <h2>New Student</h2>
+    <%= render partial: 'portals/student' %>
+  </div>
+</div>
+
+
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Student</h2>
+    <%= form_with url: '', id: "editForm", method: :put do |form| %>
+      <div>
+        <%= form.label :name, "Name" %>
+        <%= form.text_field :name, id: "studentName" %>
+      </div>
+
+      <div>
+        <%= form.label :subject, "Subject" %>
+        <%= form.text_field :subject, id: "studentSubject" %>
+      </div>
+
+      <div>
+        <%= form.label :marks, "Marks" %>
+        <%= form.text_field :marks, id: "studentMarks" %>
+      </div>
+
+      <%= form.submit "Update", class: "submit-btn" %>
+    <% end %>
+  </div>
+</div>

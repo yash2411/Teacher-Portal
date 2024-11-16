@@ -1,0 +1,90 @@
+:root {
+    --gray: rgb(179, 173, 173)
+}
+
+.students {
+    width: 80%;
+    border-collapse: collapse; 
+    margin: 40px auto;
+    background-color: #d1cccc;
+}
+
+th{
+    border-right: 2px solid var(--gray);
+    border-bottom: 2px solid var(--gray);
+    text-align: center;
+    padding: 1.5rem;
+    color: gray;
+}
+
+.row {
+    border-bottom: 2px solid var(--gray);
+}
+
+td {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;  /* Dark background for the button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.dropbtn::after {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+    min-width: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.new_student {
+    margin: 20px;
+}
+
+.new_student_btn {
+    width: 10%;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+<%= form_for @user, url: sessions_path do |f| %>
+    <div class="login_form">
+        <div class="email_field form_field">
+            <div class="email_label label">
+                <%= f.label :email, "Email" %>
+            </div>
+
+            <div class="input">
+                <span class="user_icon icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <span>
+                    <%= f.email_field :email,class: 'email_input input_box' %>
+                </span>
+            </div>
+        </div>
+
+        <div class="password_field form_field">
+            <div class="password_label label">
+                <%= f.label :password, "Password" %>
+            </div>
+
+            <div class="input">
+                <span class="password_icon icon">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+                <span>
+                    <%= f.password_field :password, class: 'password_input input_box' %>
+                </span>
+            </div>
+        </div>
+
+        <div class='forgot'>
+            <%= link_to 'Forgot Password?', '' %>
+        </div>
+        <div class="form_submit">
+            <%= f.submit "Login", class: 'login_btn' %>
+        </div>
+    </div>
+<% end %>

@@ -1,0 +1,18 @@
+<%= form_with url: '/create', method: :post, id: "newStudentForm" do |form| %>
+    <div>
+      <%= form.label :name, "Name" %>
+      <%= form.text_field :name, id: "newStudentName" %>
+    </div>
+
+    <div>
+      <%= form.label :subject, "Subject" %>
+      <%= form.text_field :subject, id: "newStudentSubject" %>
+    </div>
+
+    <div>
+      <%= form.label :marks, "Marks" %>
+      <%= form.text_field :marks, id: "newStudentMarks" %>
+    </div>
+
+    <%= form.submit "Add Student", class: "submit-btn" %>
+  <% end %>

@@ -1,0 +1,12 @@
+.navtabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.navtab {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #000;
+}
