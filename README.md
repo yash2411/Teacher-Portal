@@ -1,24 +1,20 @@
-# README
+# Rails 7 Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+To set up and run this Rails 7 project, follow the steps below:
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+- Ruby installed (version 3.0.0 or above recommended)
+- Rails installed (version 7.0 or above)
+- Database setup (e.g., PostgreSQL or MySQL)
+- Git installed
 
-* Configuration
+### Setup Instructions
 
-* Database creation
+1. **Clone the Repository**  
+   Clone the project to your local machine using Git:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   ```bash
+   git clone <your-repo-url>
