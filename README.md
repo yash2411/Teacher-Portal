@@ -1,4 +1,4 @@
-# Rails 7 Project
+# Teacher Portal
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ To set up and run this Rails 7 project, follow the steps below:
 
 - Ruby installed (version 3.0.0 or above recommended)
 - Rails installed (version 7.0 or above)
-- Database setup (e.g., PostgreSQL or MySQL)
+- Database setup (sqlite3)
 - Git installed
 
 ### Setup Instructions
@@ -17,4 +17,20 @@ To set up and run this Rails 7 project, follow the steps below:
    Clone the project to your local machine using Git:
 
    ```bash
-   git clone <your-repo-url>
+   git clone git@github.com:yash2411/Teacher-Portal.git
+
+2. **Install the dependencies**  
+
+   ```bash
+   cd teacher_portal
+   bundle install
+
+3. **Database setup**  
+
+   ```bash
+   rails db:migrate
+
+4. **Run server**  
+
+   ```bash
+   rails s
